@@ -2,17 +2,15 @@ package paulwellnerbou
 
 import grails.test.hibernate.HibernateSpec
 import grails.testing.services.ServiceUnitTest
-import spock.lang.Specification
 
-class HelperServiceSpec extends HibernateSpec implements ServiceUnitTest<HelperService>{
+class HelperServiceSpec extends HibernateSpec implements ServiceUnitTest<HelperService> {
 
     @Override
     List<Class> getDomainClasses() {
         [Person]
     }
 
-    def 'test some db interactin'() {
-
+    def 'test some db interaction'() {
         when:
         Person.saveAll(
                 new Person(firstName: 'Keith', lastName: 'Emerson'),
